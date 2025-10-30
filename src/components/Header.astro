@@ -1,5 +1,7 @@
 <header>
+
   <nav>
+  
     <div class="logo">LOGO</div>
 
     <ul class="nav-links">
@@ -11,7 +13,7 @@
     </ul>
 
     <div class="user">
-      <img src="https://via.placeholder.com/40" alt="Usuario">
+      <img src="https://i.pravatar.cc/40" alt="Usuario" />
     </div>
   </nav>
 </header>
@@ -20,10 +22,10 @@
   /* HEADER GENERAL */
   header {
     width: 100vw;
-    position: sticky;
+    position: fixed;
     top: 0;
-    background: #d1aeae;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
     z-index: 10;
   }
 
@@ -33,12 +35,12 @@
     height: 70px;
     margin: 0 auto;
     padding: 0 1.5rem;
-
+    backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-
+  
   /* LOGO */
   .logo {
     font-weight: 700;
@@ -71,7 +73,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: white;
+    background: rgb(255, 255, 255);
     transition: width 0.3s ease;
   }
 
@@ -83,7 +85,7 @@
   .user {
     width: 45px;
     height: 45px;
-    background-color: #ffffff22;
+    
     border-radius: 50%;
     overflow: hidden;
     display: flex;
@@ -109,7 +111,7 @@
     .nav-links {
       flex-direction: column;
       width: 100%;
-      background-color: #c79c9c;
+      background-color: #ff0000;
       margin-top: 0.5rem;
       padding: 0.5rem 0;
       display: none;

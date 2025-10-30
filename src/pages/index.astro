@@ -50,14 +50,19 @@ import Layout from "../layouts/Layout.astro";
   }
 
   section:nth-of-type(1) {
-    background-color: #c40707;
+    background: #a89e36;
+    background: radial-gradient(
+      circle,
+      rgba(168, 158, 54, 1) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
   section:nth-of-type(2) {
-    background-color: #a6b616;
+   background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgba(253, 187, 45, 1) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,7 +75,7 @@ import Layout from "../layouts/Layout.astro";
   }
 
   .cards-cont {
-    width: 90%;
+    width: 100%;
     height: 90%;
     gap: 10px;
     display: flex;
@@ -79,7 +84,7 @@ import Layout from "../layouts/Layout.astro";
   }
 
   .card {
-    width: 500px;
+    width: 90%;
     height: 300px;
     background-color: rgb(34, 108, 172);
     border-radius: 10px;
@@ -87,5 +92,10 @@ import Layout from "../layouts/Layout.astro";
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  @media (max-width: 768px) {
+    .cards-cont {
+      flex-direction: column;
+    }
   }
 </style>
