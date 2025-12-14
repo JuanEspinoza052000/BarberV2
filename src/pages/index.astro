@@ -1,101 +1,269 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Buttonstyle from "../components/buttonstyle.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-  <section class="services">
-    <h1>barbershop Alajuela</h1>
-    <p>Crea tu estilo con excelentes barberos y excelentes precios</p>
-    <div class="buttons-cont">
-      <button><a href="/">Agendar</a></button>
-      <button><a href="/">Agendar</a></button>
+  <section class="hero-section">
+    <div class="hero-cont">
+      <p class="hero-P">Where tradition <br /> meets modern style</p>
+      <div class="buttons-cont">
+        <Buttonstyle text="Agendar cita" href="/agendar" />
+        <Buttonstyle text="Ver servicios" href="/servicios" />
+      </div>
     </div>
   </section>
-  <section>
+
+  <section class="Contact-section">
+    <div class="text-cont">
+      <h1>SERVICE BEYOND <br /> EXPECTATION</h1>
+      <p>our babershop is the territory</p>
+      <button> Ubicacion</button>
+    </div>
+    <div class="map-cont">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4809.31539529068!2d-84.21503055352197!3d10.016246845875148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2scr!4v1761614267260!5m2!1ses!2scr"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="contact-cont">
+      <div class="location-cont">
+        <div class="icon-cont"></div>
+        <div class="location-text">
+          <h2>Our Location</h2>
+          <p>123 Barber St, City, Country</p>
+        </div>
+      </div>
+      <hr />
+      <div class="telephone-cont">
+        <div class="location-cont">
+          <div class="icon-cont"></div>
+          <div class="location-text">
+            <h2>+506 63118684</h2>
+            <p>Monday - Saturday: 9am -8pm <br /> Sunday: 9am - 6pm</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="details-section">
+    <div class="details-text">
+      <h1>DISCOVER <br /> OUR WORKS</h1>
+      <p>
+        Explore our gallery to see the exceptional styles and transformations
+        crafted by our talented barbers. From classic cuts to modern trends,
+        witness the artistry that defines our barbershop.
+      </p>
+    </div>
+
     <div class="cards-cont">
-      <div class="card">
-        <h1>Cortes de Pelo</h1>
-        <p>Cambia tu estilo a manos de profecionales</p>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+    </div>
+    <div class="testimonial&price-cont">
+      <div class="testimonials-cont">
+        <h1>WHAT OUR CLIENTS SAY</h1>
+        <p>
+          "Excellent service and friendly staff! Highly recommend this
+          barbershop."
+        </p>
+        <p>"The best haircut I've ever had. Will definitely be coming back!"</p>
       </div>
-      <div class="card">
-        <h1>Cortes de barba</h1>
-      </div>
-      <div class="card">
-        <h1>Diseño de cejas</h1>
-      </div>
-      <div class="card">
-        <h1>Afeitado clásico</h1>
-      </div>
-      <div class="card">
-        <h1>Tratamientos capilares</h1>
-      </div>
-      <div class="card">
-        <h1>Tintado de cabello</h1>
+      <div class="price-cont">
+        <h1>OUR PRICES</h1>
+        <p>Haircut: $20</p>
+        <p>Beard Trim: $15</p>
+        <p>Combo (Haircut + Beard Trim): $30</p>
       </div>
     </div>
   </section>
-  <section></section>
-  <section></section>
-</Layout>
 
-<style>
-  section {
-    height: 100vh;
-    width: 100vw;
-    border-bottom: 1px solid #ccc;
-    scroll-snap-align: start;
-  }
+  <section class="personal-info-cont">
+    <div class="personalText-cont">
+      <h1>PERSONALIZED SERVICES</h1>
+      <p>
+        At our barbershop, we believe in tailoring our services to meet your
+        unique style and preferences. Our experienced barbers take the time to
+        understand your vision and provide personalized recommendations to
+        ensure you leave looking and feeling your best.
+      </p>
+    </div>
 
-  section:nth-of-type(1) {
-    background: #a89e36;
-    background: radial-gradient(
-      circle,
-      rgba(168, 158, 54, 1) 0%,
-      rgba(0, 0, 0, 1) 100%
-    );
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  section:nth-of-type(2) {
-   background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgba(253, 187, 45, 1) 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  section:nth-of-type(3) {
-    background-color: #124630;
-  }
-  section:nth-of-type(4) {
-    background-color: #a1cf35;
-  }
+    <div class="personal-image-cont">
+      <img src="/personalized-service.jpg" alt="Personalized Services" />
+    </div>
+    <div class="personal-image-cont">
+      <img src="/personalized-service.jpg" alt="Personalized Services" />
+    </div>
+    <div class="personal-image-cont">
+      <img src="/personalized-service.jpg" alt="Personalized Services" />
+    </div>
 
-  .cards-cont {
-    width: 100%;
-    height: 90%;
-    gap: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .card {
-    width: 90%;
-    height: 300px;
-    background-color: rgb(34, 108, 172);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  @media (max-width: 768px) {
-    .cards-cont {
-      flex-direction: column;
+    <div class="aplication-cont">
+      <div class="aplication-text-cont">
+        <p>Woul you like to join our team?</p>
+        <button>
+          <a href="/">Send a resume</a>
+        </button>
+      </div>
+    </div>
+  </section>
+  <style>
+    .hero-section {
+      background-image: url("/26256.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: right;
+      align-items: end;
     }
-  }
-</style>
+    section {
+      height: 100vh;
+      width: 100vw;
+      border-bottom: 1px solid #ccc;
+      scroll-snap-align: start;
+    }
+    .hero-cont {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 600px;
+      height: 300px;
+      margin: 50px;
+      border-radius: 10px;
+      padding: 20px;
+      gap: 10px;
+      font-family: "Times New Roman", Times, serif;
+      color: white;
+    }
+    .buttons-cont {
+      display: flex;
+      gap: 10px;
+      text-align: center;
+    }
+    .hero-P {
+      font-size: 3.5rem;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .Contact-section {
+      background-color: #643b3b;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .text-cont {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;
+      width: 30%;
+      color: white;
+      font-family: "Times New Roman", Times, serif;
+    }
+
+    .map-cont {
+      width: 30%;
+      height: 400px;
+      border: 2px solid white;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .map-cont iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      filter: sepia(0.5);
+    }
+
+    .contact-cont {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      width: 30%;
+      color: white;
+      font-family: "Times New Roman", Times, serif;
+    }
+
+    hr {
+      width: 60%;
+      border: 0.5px solid white;
+    }
+
+    .details-section {
+      height: 200vh;
+      background-color: #35654d;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+      color: white;
+      font-family: "Times New Roman", Times, serif;
+    }
+    .details-cont {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      width: 80%;
+    }
+    .cards-cont {
+      background-color: #a1cf35;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      width: 80%;
+      padding: 10px;
+      border: 2px solid black;
+    }
+    .card {
+      background-color: slateblue;
+      font-family: "Times New Roman", Times, serif;
+      padding: 20px;
+      margin: auto;
+      border-radius: 10px;
+      width: 30%;
+      height: 200px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+      color: black;
+    }
+
+    section:nth-of-type(3) {
+      background-color: #124630;
+    }
+    section:nth-of-type(4) {
+      background-color: #a1cf35;
+    }
+
+    @media (max-width: 768px) {
+      .cards-cont {
+        flex-direction: column;
+      }
+    }
+  </style>
+</Layout>
